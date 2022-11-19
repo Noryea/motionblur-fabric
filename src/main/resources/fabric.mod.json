@@ -3,13 +3,13 @@
   "id": "motionblur",
   "version": "${version}",
   "name": "Motion Blur",
-  "description": "New Motion Blur Mod",
+  "description": "New Motion Blur Mod.",
   "authors": [
     "Noryea"
   ],
   "contact": {
-    "sources": "",
-    "issue": ""
+    "sources": "https://github.com/Noryea/motionblur-fabric",
+    "issue": "https://github.com/Noryea/motionblur-fabric/issues"
   },
   "license": "All rights reserved",
   "environment": "client",

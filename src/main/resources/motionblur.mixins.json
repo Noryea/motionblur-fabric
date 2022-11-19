@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cn.noryea.motionblur.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "AccessorShaderEffect",
+    "MixinGameRenderer",
+    "MixinReloadableResourceManagerImpl"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

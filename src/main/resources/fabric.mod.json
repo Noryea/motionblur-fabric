@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "motionblur",
+  "version": "${version}",
+  "name": "Motion Blur",
+  "description": "New Motion Blur Mod",
+  "authors": [
+    "Noryea"
+  ],
+  "contact": {
+    "sources": "",
+    "issue": ""
+  },
+  "license": "All rights reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "cn.noryea.motionblur.MotionBlurMod"
+    ]
+  },
+  "mixins": [
+    "motionblur.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "minecraft": "1.19.x",
+    "fabric": "*",
+    "java": ">=17"
+  }
+}

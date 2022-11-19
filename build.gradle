@@ -39,6 +39,8 @@ dependencies {
 	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
 
 	include "maven.modrinth:midnightlib:${project.midnightlib_version}"
+
+	modCompileOnly name: 'sodium-fabric-mc1.19.2-0.4.4+build.18'
 }
 
 loom {

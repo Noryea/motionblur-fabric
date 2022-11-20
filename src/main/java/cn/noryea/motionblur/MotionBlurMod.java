@@ -28,15 +28,13 @@ public class MotionBlurMod implements ClientModInitializer {
   		    dispatcher.register(
                 ClientCommandManager.literal("motionblur")
                     .then(ClientCommandManager.literal("amount")
-                        .then(ClientCommandManager.argument("percent", IntegerArgumentType.integer(1, 100))
+                        .then(ClientCommandManager.argument("percent", IntegerArgumentType.integer(0, 100))
                             .executes(context -> changeAmount(context.getSource(), IntegerArgumentType.getInteger(context, "percent")))))
-                    .then(ClientCommandManager.literal("toggle")
-                            .executes(context -> toggle(context.getSource())))
             );
         });
 
         ShaderEffectRenderCallback.EVENT.register((deltaTick) -> {
-            if (MotionBlurConfig.enable) {
+            if (MotionBlurConfig.motionBlurAmount != 0) {
                 if(currentBlur!=getBlur()){
                     motionblur.setUniformValue("BlendFactor", getBlur());
                     currentBlur=getBlur();
@@ -49,20 +47,9 @@ public class MotionBlurMod implements ClientModInitializer {
     private static int changeAmount(FabricClientCommandSource src, int amount) {
         MotionBlurConfig.motionBlurAmount = amount;
 
-        src.sendFeedback(Text.literal("Motion blur Amount: " + amount + "%"));
+        src.sendFeedback(Text.literal("Motion Blur: " + amount + "%"));
         return amount;
 
-    }
-
-    private static int toggle(FabricClientCommandSource src) {
-        MotionBlurConfig.enable = !MotionBlurConfig.enable;
-
-        if (MotionBlurConfig.enable) {
-            src.sendFeedback(Text.literal("Motion blur: On"));
-        } else {
-            src.sendFeedback(Text.literal("Motion blur: Off"));
-        }
-        return 1;
     }
 
     public float getBlur() {

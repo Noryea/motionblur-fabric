@@ -13,16 +13,6 @@ jobs:
       with:
         java-version: 17
         distribution: adopt
-    - name: Cache/Uncache Sodium
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.gradle/caches
-          ~/.gradle/loom-cache
-          ~/.gradle/wrapper
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
-        restore-keys: |
-          ${{ runner.os }}-gradle-
     - name: Build artifacts
       run: ./gradlew build
     - name: Extract current branch name
@@ -33,5 +23,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: build-artifacts-${{ steps.ref.outputs.branch }}
+        name: motionblur-artifacts-${{ steps.ref.outputs.branch }}
         path: build/libs

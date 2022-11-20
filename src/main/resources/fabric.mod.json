@@ -11,20 +11,19 @@
     "sources": "https://github.com/Noryea/motionblur-fabric",
     "issue": "https://github.com/Noryea/motionblur-fabric/issues"
   },
-  "license": "All rights reserved",
+  "license": "LGPL-3.0",
   "environment": "client",
   "entrypoints": {
     "client": [
       "cn.noryea.motionblur.MotionBlurMod"
     ]
   },
-  "mixins": [
-    "motionblur.mixins.json"
-  ],
+  "mixins": [],
   "depends": {
     "fabricloader": ">=0.11.3",
     "minecraft": "1.19.x",
     "fabric": "*",
+    "satin": "*",
     "java": ">=17"
   }
 }

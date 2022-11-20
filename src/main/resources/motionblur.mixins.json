@@ -4,9 +4,7 @@
   "package": "cn.noryea.motionblur.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
-  "client": [
-
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

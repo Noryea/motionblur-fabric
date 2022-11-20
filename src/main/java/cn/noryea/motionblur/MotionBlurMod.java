@@ -27,9 +27,8 @@ public class MotionBlurMod implements ClientModInitializer {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
   		    dispatcher.register(
                 ClientCommandManager.literal("motionblur")
-                    .then(ClientCommandManager.literal("amount")
-                        .then(ClientCommandManager.argument("percent", IntegerArgumentType.integer(0, 100))
-                            .executes(context -> changeAmount(context.getSource(), IntegerArgumentType.getInteger(context, "percent")))))
+                    .then(ClientCommandManager.argument("percent", IntegerArgumentType.integer(0, 100))
+                        .executes(context -> changeAmount(context.getSource(), IntegerArgumentType.getInteger(context, "percent"))))
             );
         });
 

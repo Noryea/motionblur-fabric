@@ -5,9 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [],
   "client": [
-    "AccessorShaderEffect",
-    "MixinGameRenderer",
-    "MixinReloadableResourceManagerImpl"
+
   ],
   "injectors": {
     "defaultRequire": 1

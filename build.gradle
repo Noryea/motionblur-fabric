@@ -16,6 +16,14 @@ configurations {
 
 repositories {
 	maven {
+		name = 'Ladysnake Mods'
+		url = 'https://ladysnake.jfrog.io/artifactory/mods'
+		content {
+			includeGroup 'io.github.ladysnake'
+			includeGroupByRegex 'io\\.github\\.onyxstudios.*'
+		}
+	}
+	maven {
 		url = 'https://maven.terraformersmc.com/releases'
 		content {
 			includeGroup 'com.terraformersmc'
@@ -36,9 +44,12 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
 
+	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
 	include "maven.modrinth:midnightlib:${project.midnightlib_version}"
+
+	modImplementation "io.github.ladysnake:satin:${satin_version}"
+	include "io.github.ladysnake:satin:${satin_version}"
 
 	modCompileOnly name: 'sodium-fabric-mc1.19.2-0.4.4+build.18'
 }

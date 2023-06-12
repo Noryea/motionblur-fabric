@@ -21,7 +21,6 @@
   "mixins": [],
   "depends": {
     "fabricloader": ">=0.11.3",
-    "minecraft": "1.19.x",
     "fabric": "*",
     "satin": "*",
     "java": ">=17"

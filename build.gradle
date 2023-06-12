@@ -12,6 +12,10 @@ group = project.maven_group
 
 configurations {
 	includeClasspath
+
+	modIncludeImplementation
+	include.extendsFrom modIncludeImplementation
+	modImplementation.extendsFrom modIncludeImplementation
 }
 
 repositories {
@@ -45,8 +49,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation "io.github.ladysnake:satin:${satin_version}"
-	include "io.github.ladysnake:satin:${satin_version}"
+	modIncludeImplementation "io.github.ladysnake:satin:${satin_version}"
+	modIncludeImplementation(fabricApi.module("fabric-command-api-v1", project.fabric_version))
 }
 
 loom {

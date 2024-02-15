@@ -9,7 +9,7 @@
   ],
   "contact": {
     "sources": "https://github.com/Noryea/motionblur-fabric",
-    "issue": "https://github.com/Noryea/motionblur-fabric/issues"
+    "issues": "https://github.com/Noryea/motionblur-fabric/issues"
   },
   "license": "LGPL-3.0",
   "environment": "client",
